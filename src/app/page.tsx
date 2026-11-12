@@ -1,5 +1,148 @@
 import Link from "next/link";
 
 export default function Home() {
-  return <><section className="wrap hero"><div><p className="eyebrow">● SPORTS & MENTAL PERFORMANCE</p><h1>Your next level<br />starts <em>within.</em></h1><p className="intro">You train your body. Give your mind the same attention. Build the confidence, clarity, and resilience to show up as your best — in sport and beyond.</p><div className="actions"><Link className="button" href="/contact">Let’s get started ↗</Link><Link className="text-link" href="/about">Meet Boost MP →</Link></div><p className="micro">FOR ATHLETES. FOR TEAMS. FOR WHAT’S NEXT.</p></div><div className="performance-art" aria-hidden="true"><span className="art-label">MINDSET IS MOMENTUM</span><div className="orbit" /><div className="orbit inner" /><div className="arrow">↗</div><div className="art-tag">● YOUR POTENTIAL. UNLOCKED.</div><span className="art-bottom">THE WORK STARTS WITHIN. / BOOST MP</span></div></section><div className="strip"><div className="wrap">Train with intention. <span>✳</span> Compete with confidence. <span>✳</span> Grow beyond the game.</div></div><section className="wrap section"><div className="section-heading"><div><p className="eyebrow">THE MENTAL SIDE OF YOUR GAME</p><h2>Talent is a starting point.<br />Mindset moves you forward.</h2></div><p>Practical mental skills for the moments that matter. Support tailored to your goals, your sport, and your journey.</p></div><div className="cards">{[["A performance mindset", "Build the habits and perspective to approach training and competition with intention."], ["Focus & confidence", "Direct your attention, trust your preparation, and move forward after setbacks."], ["Composure under pressure", "Develop practical strategies for managing performance nerves and finding your reset."], ["Stronger teams", "Build communication and a shared culture of growth through team workshops."]].map(([title, body], i) => <article key={title}><div className="card-number">0{i + 1}<span>↗</span></div><h3>{title}</h3><p>{body}</p></article>)}</div></section><section className="approach"><div className="wrap split"><div><p className="eyebrow">PROGRESS, NOT PERFECTION</p><h2>Small shifts.<br /><em>Lasting impact.</em></h2><p>There’s no one-size-fits-all path to performance. We start with you, then build skills you can put into practice every day.</p><Link className="text-link" href="/about">Explore our approach →</Link></div><ol className="steps">{[["Connect", "Explore where you are, what matters to you, and where you want to go."], ["Build", "Develop a personalized mental skills toolkit through intentional practice."], ["Apply", "Bring those skills into training, competition, and everyday life."]].map(([title, body], i) => <li key={title}><span>0{i + 1}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}</ol></div></section><section className="wrap"><div className="cta"><p className="eyebrow">YOUR NEXT CHAPTER</p><h2>Ready to put your mind<br />in the game?</h2><Link className="button" href="/contact">Start a conversation ↗</Link><span aria-hidden="true">↗</span></div></section></>;
+  return (
+    <>
+      <section className="wrap hero">
+        <div>
+          <p className="eyebrow">● SPORTS & MENTAL PERFORMANCE</p>
+          <h1>
+            Your next level
+            <br />
+            starts <em>within.</em>
+          </h1>
+          <p className="intro">
+            You train your body. Give your mind the same attention. Build the
+            confidence, clarity, and resilience to show up as your best — in
+            sport and beyond.
+          </p>
+          <div className="actions">
+            <Link className="button" href="/contact">
+              Let’s get started ↗
+            </Link>
+            <Link className="text-link" href="/about">
+              Meet Boost MP →
+            </Link>
+          </div>
+          <p className="micro">FOR ATHLETES. FOR TEAMS. FOR WHAT’S NEXT.</p>
+        </div>
+        <div className="performance-art" aria-hidden="true">
+          <span className="art-label">MINDSET IS MOMENTUM</span>
+          <div className="orbit" />
+          <div className="orbit inner" />
+          <div className="arrow">↗</div>
+          <div className="art-tag">● YOUR POTENTIAL. UNLOCKED.</div>
+          <span className="art-bottom">THE WORK STARTS WITHIN. / BOOST MP</span>
+        </div>
+      </section>
+      <div className="strip">
+        <div className="wrap">
+          Train with intention. <span>✳</span> Compete with confidence.{" "}
+          <span>✳</span> Grow beyond the game.
+        </div>
+      </div>
+      <section className="wrap section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">THE MENTAL SIDE OF YOUR GAME</p>
+            <h2>
+              Talent is a starting point.
+              <br />
+              Mindset moves you forward.
+            </h2>
+          </div>
+          <p>
+            Practical mental skills for the moments that matter. Support
+            tailored to your goals, your sport, and your journey.
+          </p>
+        </div>
+        <div className="cards">
+          {[
+            [
+              "A performance mindset",
+              "Build the habits and perspective to approach training and competition with intention.",
+            ],
+            [
+              "Focus & confidence",
+              "Direct your attention, trust your preparation, and move forward after setbacks.",
+            ],
+            [
+              "Composure under pressure",
+              "Develop practical strategies for managing performance nerves and finding your reset.",
+            ],
+            [
+              "Stronger teams",
+              "Build communication and a shared culture of growth through team workshops.",
+            ],
+          ].map(([title, body], i) => (
+            <article key={title}>
+              <div className="card-number">
+                0{i + 1}
+                <span>↗</span>
+              </div>
+              <h3>{title}</h3>
+              <p>{body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="approach">
+        <div className="wrap split">
+          <div>
+            <p className="eyebrow">PROGRESS, NOT PERFECTION</p>
+            <h2>
+              Small shifts.
+              <br />
+              <em>Lasting impact.</em>
+            </h2>
+            <p>
+              There’s no one-size-fits-all path to performance. We start with
+              you, then build skills you can put into practice every day.
+            </p>
+            <Link className="text-link" href="/about">
+              Explore our approach →
+            </Link>
+          </div>
+          <ol className="steps">
+            {[
+              [
+                "Connect",
+                "Explore where you are, what matters to you, and where you want to go.",
+              ],
+              [
+                "Build",
+                "Develop a personalized mental skills toolkit through intentional practice.",
+              ],
+              [
+                "Apply",
+                "Bring those skills into training, competition, and everyday life.",
+              ],
+            ].map(([title, body], i) => (
+              <li key={title}>
+                <span>0{i + 1}</span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+      <section className="wrap">
+        <div className="cta">
+          <p className="eyebrow">YOUR NEXT CHAPTER</p>
+          <h2>
+            Ready to put your mind
+            <br />
+            in the game?
+          </h2>
+          <Link className="button" href="/contact">
+            Start a conversation ↗
+          </Link>
+          <span aria-hidden="true">↗</span>
+        </div>
+      </section>
+    </>
+  );
 }
