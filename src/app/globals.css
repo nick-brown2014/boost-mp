@@ -202,13 +202,13 @@ h3 {
   position: fixed;
   inset: 0 0 auto;
   z-index: 50;
+  transform: translateZ(0);
   transition:
-    background 0.3s,
+    background-color 0.3s,
     box-shadow 0.3s;
 }
 .site-header[data-solid="true"] {
-  background: rgba(88, 107, 122, 0.96);
-  backdrop-filter: blur(8px);
+  background-color: var(--slate);
   box-shadow: 0 1px 0 rgba(253, 245, 220, 0.12);
 }
 .header-inner {
@@ -645,11 +645,6 @@ h3 {
   font-size: clamp(32px, 3.4vw, 46px);
   line-height: 1.15;
   max-width: 720px;
-  margin-bottom: 20px;
-}
-.notice {
-  font-size: 15px;
-  opacity: 0.8;
   margin-bottom: 40px;
 }
 .contact-form {
