@@ -11,32 +11,34 @@ export async function submitContact(
     typeof formData.get(key) === "string"
       ? (formData.get(key) as string).trim()
       : "";
-  const name = read("name"),
+  const firstName = read("firstName"),
+    lastName = read("lastName"),
     email = read("email"),
-    phone = read("phone"),
-    type = read("type"),
+    subject = read("subject"),
     message = read("message");
   if (
-    !name ||
-    name.length > 100 ||
+    !firstName ||
+    firstName.length > 60 ||
+    !lastName ||
+    lastName.length > 60 ||
     !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
     email.length > 254 ||
-    phone.length > 40 ||
-    !["Athlete", "Team", "Organization", "Other"].includes(type) ||
+    !subject ||
+    subject.length > 150 ||
     !message ||
     message.length > 3000
   ) {
     return {
       status: "error",
       message:
-        "Please enter your name, a valid email, your role, and a message (up to 3,000 characters). Phone numbers must be under 40 characters.",
+        "Please enter your first and last name, a valid email, a subject, and a message (up to 3,000 characters).",
     };
   }
   // TODO: Wire an email provider here before enabling real inquiries.
-  console.info("Boost MP demo contact form validated", { type });
+  console.info("Boost by Mike demo contact form validated");
   return {
     status: "success",
     message:
-      "Demo submission validated successfully. No email was sent and no inquiry was saved.",
+      "Thanks! This preview form validated your message, but it was not sent yet.",
   };
 }

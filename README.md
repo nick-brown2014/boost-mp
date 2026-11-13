@@ -1,6 +1,6 @@
-# Boost MP
+# Boost by Mike
 
-A Next.js App Router website for Sports & Mental Performance consulting, built with TypeScript and Tailwind CSS.
+Website for [boostbymike.com](https://boostbymike.com): mental performance coaching with Mike Mata, CMPC®. Next.js App Router, TypeScript, Tailwind CSS.
 
 ## Development
 
@@ -16,11 +16,13 @@ npm start
 
 ## Pages
 
-- `/` — landing page, services, and approach
-- `/about` — mission, values, and placeholder consultant biography
-- `/contact` — validated demo contact form
-- `/tools` — Coming soon — TBD
+- `/` — parallax hero, the work, approach, specialties, credentials, contact CTA
+- `/about` — Mike's bio, credentials, specialties, CMPC® accreditation
+- `/contact` — validated demo contact form (first/last name, email, subject, message)
+- `/tools` — coming soon
+
+Images live in `public/images/`; the favicon/app icons are `src/app/favicon.ico`, `icon.png`, and `apple-icon.png`. Shared copy (specialties, LinkedIn/Instagram URLs) is in `src/lib/site.ts`.
 
 ## Before launch
 
-Replace `[Consultant Name]` and the biography placeholder with approved information. The contact server action validates input and logs only a non-sensitive demo event; it does not send email or persist inquiries. Connect an email provider in `src/app/contact/actions.ts`, add abuse protection and privacy information, and update the demo notice and success message before accepting real inquiries.
+Set `linkedinUrl` / `instagramUrl` in `src/lib/site.ts` to show those links. The contact server action validates input and logs only a non-sensitive demo event; it does not send email or persist inquiries. Connect an email provider in `src/app/contact/actions.ts`, add abuse protection and privacy information, and update the preview notice and success message before accepting real inquiries.
