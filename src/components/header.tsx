@@ -1,22 +1,41 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import logo from "../../public/images/logo-wordmark-light.png";
+
+const links = [
+  ["About", "/about"],
+  ["Tools", "/tools"],
+  ["Contact", "/contact"],
+];
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const path = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header>
+    <header
+      className="site-header"
+      data-solid={scrolled || open || path !== "/"}
+    >
       <div className="wrap header-inner">
         <Link
           className="brand"
           href="/"
-          aria-label="Boost MP home"
+          aria-label="Boost by Mike home"
           onClick={() => setOpen(false)}
         >
-          boost<span>mp</span>
-          <b>↗</b>
+          <Image src={logo} alt="Boost mental performance" preload />
         </Link>
         <button
           className="menu"
@@ -24,19 +43,14 @@ export function Header() {
           aria-controls="nav"
           onClick={() => setOpen(!open)}
         >
-          {open ? "Close −" : "Menu +"}
+          {open ? "Close" : "Menu"}
         </button>
         <nav
           id="nav"
           aria-label="Main navigation"
           className={open ? "open" : ""}
         >
-          {[
-            ["Home", "/"],
-            ["About", "/about"],
-            ["Tools", "/tools"],
-            ["Contact", "/contact"],
-          ].map(([label, href]) => (
+          {links.map(([label, href]) => (
             <Link
               key={href}
               href={href}
@@ -44,7 +58,6 @@ export function Header() {
               onClick={() => setOpen(false)}
             >
               {label}
-              {label === "Contact" ? " ↗" : ""}
             </Link>
           ))}
         </nav>

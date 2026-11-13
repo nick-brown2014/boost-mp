@@ -1,21 +1,27 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import clouds from "../../../public/images/logo-clouds.png";
+
 export const metadata: Metadata = {
   title: "Tools",
-  description: "Boost MP mental performance tools. Coming soon.",
+  description: "Mental performance tools from Boost by Mike. Coming soon.",
 };
+
 export default function Tools() {
   return (
-    <section className="wrap page-intro tools">
-      <p className="eyebrow">YOUR MENTAL TOOLKIT</p>
-      <h1>
-        Tools for
-        <br />
-        <em>what’s next.</em>
-      </h1>
-      <div className="coming">
-        <span aria-hidden="true">✳</span>
-        <h2>Coming soon — TBD</h2>
-        <p>Watch this space. More to come.</p>
+    <section className="page-top fold-slate tools">
+      <div className="wrap tools-inner">
+        <Image src={clouds} alt="" width={140} height={140} />
+        <p className="eyebrow">Tools</p>
+        <h1>Coming soon.</h1>
+        <p className="muted">
+          Applied tools for everyday life and performance are on the way. In the
+          meantime, reach out to start working with Mike.
+        </p>
+        <Link className="button" href="/contact">
+          Get in touch
+        </Link>
       </div>
     </section>
   );
