@@ -15,9 +15,6 @@ export default function Contact() {
           If you have a project in mind, or if you’d like to work with Mike,
           please complete the form below.
         </h1>
-        <p className="notice">
-          Preview form: submissions are validated but not yet emailed or saved.
-        </p>
         <ContactForm />
       </div>
     </section>
