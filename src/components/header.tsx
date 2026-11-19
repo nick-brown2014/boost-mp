@@ -7,6 +7,7 @@ import logo from "../../public/images/logo-wordmark-light.png";
 
 const links = [
   ["About", "/about"],
+  ["The Work", "/the-work"],
   ["Tools", "/tools"],
   ["Contact", "/contact"],
 ];

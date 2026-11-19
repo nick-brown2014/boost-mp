@@ -32,12 +32,9 @@ export default function Home() {
           <h1>Boost by Mike</h1>
           <p className="hero-lede">
             Strategic mentorship and mental skills for athletes, performing
-            artists, leaders, and organizations, virtual and in-person.
+            artists, leaders, and organizations.
           </p>
           <div className="actions">
-            <Link className="button" href="/contact">
-              I’m intrigued
-            </Link>
             <Link className="button ghost" href="/about">
               Meet Mike
             </Link>
@@ -48,30 +45,7 @@ export default function Home() {
         </a>
       </Parallax>
 
-      <section id="intro" className="fold fold-slate">
-        <div className="wrap split">
-          <Reveal>
-            <p className="eyebrow">The work</p>
-            <h2>
-              A source of support. <em>A strategy for performance.</em>
-            </h2>
-          </Reveal>
-          <Reveal className="prose">
-            <p>
-              <span className="hl-sky">Mike Mata</span> is a mental skills coach
-              (CMPC®) who helps people perform at their best,{" "}
-              <span className="hl-mint">virtual and in-person</span>.
-            </p>
-            <p>
-              The focus: mental skills that fit into{" "}
-              <span className="hl-mint">everyday life</span>, plus applied tools
-              that power <span className="hl-mint">performance</span> mastery.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="fold fold-cream">
+      <section id="intro" className="fold fold-cream">
         <div className="wrap">
           <Reveal className="section-heading">
             <p className="eyebrow">The approach</p>

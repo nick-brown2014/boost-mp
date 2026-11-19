@@ -36,8 +36,8 @@ export default function About() {
                 (CMPC)
               </abbr>
               ® serving as a source of support and strategic mentorship for
-              athletes, performing artists, leaders, and organizations (
-              <span className="hl-mint">virtual and in-person</span>).
+              athletes, performing artists, leaders, and organizations,{" "}
+              <span className="hl-mint">virtual and in-person</span>.
             </p>
           </Reveal>
         </div>
@@ -122,10 +122,10 @@ export default function About() {
               Performance happens on the mountain <em>and on the stage.</em>
             </h2>
             <p>
-              Whether it’s a big-mountain line, a game-day lineup, or a live
-              set, the mental skills are the same: focus, composure, and trust
+              Whether it’s a slopestyle competition run, a business pitch, or a live
+              set, the mental skills are the same: focus, self-regulation, and trust
               in your preparation. Mike works with musicians and performing
-              artists alongside athletes and teams.
+              artists as well as athletes and teams.
             </p>
             <Link className="button" href="/contact">
               Work with Mike

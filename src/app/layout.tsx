@@ -52,6 +52,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </div>
             <nav aria-label="Footer" className="footer-links">
               <Link href="/about">About Mike</Link>
+              <Link href="/the-work">The Work</Link>
               <Link href="/tools">Tools</Link>
               <Link href="/contact">Contact</Link>
               {site.linkedinUrl && <a href={site.linkedinUrl}>LinkedIn</a>}
