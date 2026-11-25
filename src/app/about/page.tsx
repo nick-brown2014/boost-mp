@@ -75,10 +75,9 @@ export default function About() {
               mind in a kind, effective, and consistent manner.
             </p>
             <p>
-              It’s a space to co-author plans, to chase aspirations, to get
-              curious, and to outline mental skills that fit into{" "}
-              <span className="hl-mint">everyday life +</span> applied tools
-              that power <span className="hl-mint">performance</span> mastery.
+              It’s a space to co-author a strategy, to get
+              curious, and to outline tools that both drive performance mastery
+              and fit into everyday life.
             </p>
             <h3>Specialties:</h3>
             <ul className="bullets">
@@ -125,7 +124,7 @@ export default function About() {
               Whether it’s a slopestyle competition run, a business pitch, or a live
               set, the mental skills are the same: focus, self-regulation, and trust
               in your preparation. Mike works with musicians and performing
-              artists as well as athletes and teams.
+              artists, as well as athletes and sports organizations.
             </p>
             <Link className="button" href="/contact">
               Work with Mike

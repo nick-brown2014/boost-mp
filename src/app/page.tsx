@@ -17,6 +17,12 @@ const pillars = [
   ],
 ];
 
+const terrain = [
+  [100, "M0 320 L18 316 L35 318 L55 313 L72 315 L88 311 L100 310"],
+  [1000, "M0 310 L30 304 L62 308 L100 294 L128 298 L170 282 L205 287 L245 266 L262 260 L290 263 L318 248 L352 252 L378 234 L410 239 L445 216 L470 221 L497 196 L520 188 L548 192 L585 170 L612 176 L650 157 L690 162 L722 138 L750 126 L772 117 L800 122 L836 100 L868 106 L905 82 L940 88 L972 70 L1000 58"],
+  [100, "M0 58 L15 48 L30 52 L50 30 L65 36 L85 16 L100 10"],
+] as const;
+
 export default function Home() {
   return (
     <>
@@ -31,7 +37,7 @@ export default function Home() {
           <p className="eyebrow">Mental performance coaching</p>
           <h1>Boost by Mike</h1>
           <p className="hero-lede">
-            Strategic mentorship and mental skills for athletes, performing
+            Strategic mentorship and mental skills training for athletes, performing
             artists, leaders, and organizations.
           </p>
           <div className="actions">
@@ -45,21 +51,40 @@ export default function Home() {
         </a>
       </Parallax>
 
-      <section id="intro" className="fold fold-cream">
+      <section id="intro" className="fold fold-cream approach">
         <div className="wrap">
           <Reveal className="section-heading">
             <p className="eyebrow">The approach</p>
             <h2>Getting to know yourself is where it starts.</h2>
           </Reveal>
-          <ol className="pillars">
-            {pillars.map(([title, body], i) => (
-              <Reveal as="li" key={title}>
-                <span className="pillar-num">0{i + 1}</span>
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </Reveal>
+        </div>
+        <div className="approach-climb">
+          <Reveal className="terrain">
+            {terrain.map(([w, d], i) => (
+              <svg
+                key={i}
+                className={i === 1 ? "terrain-main" : undefined}
+                viewBox={`0 0 ${w} 416`}
+                preserveAspectRatio="none"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path className="terrain-fill" d={`${d} L${w} 416 L0 416 Z`} />
+                <path className="terrain-line" d={d} />
+              </svg>
             ))}
-          </ol>
+          </Reveal>
+          <div className="wrap">
+            <ol className="pillars">
+              {pillars.map(([title, body], i) => (
+                <Reveal as="li" key={title}>
+                  <span className="pillar-num">0{i + 1}</span>
+                  <h3>{title}</h3>
+                  <p>{body}</p>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
@@ -67,8 +92,8 @@ export default function Home() {
         <div className="wrap">
           <Reveal className="band-quote">
             <blockquote>
-              It’s a space to co-author plans, to chase aspirations, and to get
-              curious.
+              It’s a space to co-author a strategy, to get curious, and to outline
+              tools that both drive performance mastery and fit into everyday life.
             </blockquote>
           </Reveal>
         </div>
@@ -80,8 +105,12 @@ export default function Home() {
             <p className="eyebrow">Who Mike works with</p>
             <h2>From the start gate to the stage.</h2>
             <p className="muted">
-              Coaching for individuals and groups who want to compete, create,
-              and lead with more clarity and confidence.
+              Coaching for anyone who wants to compete, create, lead, or come
+              back from injury with more clarity and confidence.
+              <br></br>
+              <br></br>
+              Whether at the individual level or for the whole team, mental
+              performance can be the edge that makes the difference.
             </p>
           </Reveal>
           <ul className="specialties">
